@@ -21,7 +21,7 @@ class ActivityController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
@@ -37,7 +37,7 @@ class ActivityController extends Controller
      */
     public function show(Activity $activity)
     {
-        //
+        return view('projects_detail',['project'=> $activity]);
     }
 
     /**
@@ -61,6 +61,7 @@ class ActivityController extends Controller
      */
     public function destroy(Activity $activity)
     {
-        //
+        $activity->delete();
+        return redirect('/projects');
     }
 }
